@@ -55,8 +55,8 @@
                     <a class="menu-item">
                         <span><i class="uil uil-compass"></i></span><h3>Explore</h3>
                     </a>
-                    <a class="menu-item">
-                        <span><i class="uil uil-bell"></i></span><h3>Notifications</h3>
+                    <a class="menu-item" id="notifications">
+                        <span><i class="uil uil-bell"><small class="notification-count">+9</small></i></span><h3>Notifications</h3>
                         <!-- NOTIFICATIONS POPUP -->
                         <div class="notifications-popup">
                             <div>
@@ -121,8 +121,8 @@
                         </div>
                         <!-- END OF NOTIFICATION POPUP -->
                     </a>
-                    <a class="menu-item">
-                        <span><i class="uil uil-envelope"></i></span><h3>Messages</h3>
+                    <a class="menu-item" id="messages-notifications">
+                        <span><i class="uil uil-envelope"><small class="notification-count">6</small></i></span><h3>Messages</h3>
                     </a>
                     <a class="menu-item">
                         <span><i class="uil uil-bookmark"></i></span><h3>Bookmarks</h3>
@@ -138,10 +138,71 @@
                     </a>
                 </div>
                 <!-- --------END OF SIDEBAR------ -->
+                <span for="create-post" class="btn btn-primary">Create Post</span>
             </div>
+
 <!-- ============================ middle ===========================-->
             <div class="middle">
+                <!-- -----------stories----------- -->
+                <div class="stories">
+                    <div class="story">
+                        <div class="profile-photo">
+                            <img src="./images/profile-1.jpg" alt="">
+                        </div>
+                        <p class="name">Your Story</p>
+                    </div>
+               
 
+        
+                    <div class="story">
+                        <div class="profile-photo">
+                            <img src="./images/profile-9.jpg" alt="">
+                        </div>
+                        <p class="name">Lilla James</p>
+                    </div>
+             
+
+         
+                    <div class="story">
+                        <div class="profile-photo">
+                            <img src="./images/profile-10.jpg" alt="">
+                        </div>
+                        <p class="name">Winnie Hale</p>
+                    </div>
+           
+
+       
+                    <div class="story">
+                        <div class="profile-photo">
+                            <img src="./images/profile-11.jpg" alt="">
+                        </div>
+                        <p class="name">Daniel Bale</p>
+                    </div>
+     
+
+         
+                    <div class="story">
+                        <div class="profile-photo">
+                            <img src="./images/profile-12.jpg" alt="">
+                        </div>
+                        <p class="name">Tina White</p>
+                    </div>
+        
+
+                
+                    <div class="story">
+                        <div class="profile-photo">
+                            <img src="./images/profile-8.jpg" alt="">
+                        </div>
+                        <p class="name">Jane Doe</p>
+                    </div>
+                </div>
+                <!-- --------END OF STORIES------------ -->
+                <form class="create-post">
+                    <div class="profile-photo"><img src="images/profile-1.jpg"></div>
+                    <input type="text" placeholder="What's on your mind, Diana ?" id="create-post">
+                    <input type="submit" value="Post" class="btn btn-primary">
+                </form>
             </div>
 <!-- =========================== right =============================-->
             <div class="right">
