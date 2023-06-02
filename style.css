@@ -478,6 +478,7 @@ main .container .right{
     padding: 3rem;
     border-radius: var(--card-border-radius);
     width: 50%;
+    box-shadow: 0 0 1rem var(--color-primary);
 }
 /* --font size-- */
 .customize-theme .font-size{
@@ -612,6 +613,9 @@ main .container .right{
     .left .btn{
         display: none;
     }
+    .customize-theme .card{
+        width: 80vw;
+    }
   }
   /*================================
   MEDIA QUERIES FOR SMALL TABLET AND MOBILE PHONES
@@ -652,5 +656,8 @@ main .container .right{
     }
     main .container .right{
         display: none;
+    }
+    .customize-theme .card{
+        width: 92vw;
     }
   }
