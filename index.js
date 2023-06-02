@@ -11,6 +11,7 @@ const messageSearch=document.querySelector('#message-search')
 // THEME    
 const theme=document.querySelector('#theme')
 const themeModal = document.querySelector('.customize-theme');
+const fontSizes=document.querySelectorAll('.choose-size span')
 
 
 //=============== SIDEBAR ============
@@ -79,3 +80,24 @@ const closeThemeModal=(e)=>{
 themeModal.addEventListener('click', closeThemeModal)
 
 theme.addEventListener('click',openThemeModal)
+
+//======================= FONTS ===========
+
+fontSizes.forEach(size=>{
+    let fontSize;
+
+    if(size.classList.contains('font-size-1')){
+        fontSize = '10px'
+    }else  if(size.classList.contains('font-size-2')){
+        fontSize = '13px'
+    }else  if(size.classList.contains('font-size-3')){
+        fontSize = '16px'
+    }else  if(size.classList.contains('font-size-4')){
+        fontSize = '19px'
+    }else  if(size.classList.contains('font-size-5')){
+        fontSize = '22px'
+    }
+
+    // change font size of the root html element
+    document.querySelector('html').style.fontSize=fontSize;
+})
