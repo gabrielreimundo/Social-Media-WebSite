@@ -109,7 +109,7 @@ fontSizes.forEach(size=>{
             root.style.setProperty('--sticky-top-left', '-12rem')
             root.style.setProperty('--sticky-top-right', '-35rem')
         }
-
+                                                                                                                                                               
         // change font size of the root html element
         document.querySelector('html').style.fontSize=fontSize;
     })
