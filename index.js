@@ -151,6 +151,22 @@ colorPalette.forEach(color=>{
 
 colorBackground.forEach(color=>{
     color.addEventListener('click',()=>{
-        
+        let corBackground;
+        let corElementos;
+        let fontcolors;
+        if(color.classList.contains('bg-1')){
+            corBackground = '#f0eef6'
+            corElementos= '#ffffff'
+        }else  if(color.classList.contains('bg-2')){
+            corBackground ='#2d2546' 
+            corElementos= '#241e38'
+            fontcolors='color: white !important;'
+        }else  if(color.classList.contains('bg-2')){
+            corBackground ='#1f1a30' 
+            corElementos= '#151221'
+        }
+        root.style.setProperty('--background-body',corBackground)
+        root.style.setProperty('*, *::before, *::after',fontcolors)
+        root.style.setProperty('--background-elements',corElementos)
     })
 })

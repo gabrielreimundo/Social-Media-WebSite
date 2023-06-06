@@ -23,6 +23,8 @@
 
     --sticky-top-left: 5.4rem;
     --sticky-top-right: -18rem;
+
+    --fontColorWhite:#ffffff;
 }
 
 
@@ -34,6 +36,7 @@
     text-decoration: none;
     list-style: none;
     border: none;
+    
 }
 body{
     font-family: 'Poppins', sans-serif;
