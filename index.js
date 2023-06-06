@@ -13,6 +13,8 @@ const theme=document.querySelector('#theme')
 const themeModal = document.querySelector('.customize-theme');
 const fontSizes=document.querySelectorAll('.choose-size span')
 var root=document.querySelector(':root');
+const colorPalette=document.querySelectorAll('.choose-color span')
+const colorBackground=document.querySelectorAll('.choose-bg div')
 
 
 //=============== SIDEBAR ============
@@ -84,10 +86,21 @@ theme.addEventListener('click',openThemeModal)
 
 //======================= FONTS ===========
 
+// remove active class from spans or font size selectors
+const removeSizeSelector=()=>{
+    fontSizes.forEach(size=>{
+        size.classList.remove('active')
+    })
+}
+
 fontSizes.forEach(size=>{
-    let fontSize;
 
     size.addEventListener('click',()=>{
+
+        removeSizeSelector();
+        let fontSize;
+        size.classList.toggle('active')
+
         if(size.classList.contains('font-size-1')){
             fontSize = '10px'
             root.style.setProperty('--sticky-top-left', '5.4rem')
@@ -114,4 +127,30 @@ fontSizes.forEach(size=>{
         document.querySelector('html').style.fontSize=fontSize;
     })
 
+})
+
+// change primary colors
+colorPalette.forEach(color=>{
+    color.addEventListener('click',()=>{
+        let primaryHue;
+
+        if(color.classList.contains('color-1')){
+            primaryHue = '#6b4ce6';//#6b4ce6
+        }else if(color.classList.contains('color-2')){
+            primaryHue = '#e6d14c';//#e6d14c
+        }else if(color.classList.contains('color-3')){
+            primaryHue = '#e64c61';//#e64c61
+        }else if(color.classList.contains('color-4')){
+            primaryHue = '#4ce69e';//#4ce69e
+        }else if(color.classList.contains('color-5')){
+            primaryHue = '#4cade6';//#4cade6
+        }
+        root.style.setProperty('--primary-color-hue',primaryHue)
+    })
+})
+
+colorBackground.forEach(color=>{
+    color.addEventListener('click',()=>{
+        
+    })
 })
