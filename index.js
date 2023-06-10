@@ -163,7 +163,7 @@ colorBackground.forEach(color=>{
             corElementos= '#241e38'
             fontcolors='#ffffff'
         }else  if(color.classList.contains('bg-3')){
-            corBackground ='#1f1a30' 
+            corBackground ='#1f1e1e' 
             corElementos= '#000000'
             fontcolors='#ffffff'
         }
