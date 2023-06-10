@@ -130,10 +130,19 @@ fontSizes.forEach(size=>{
 })
 
 // change primary colors
+
+const removeClassActiveColor=()=>{
+    colorPalette.forEach(color=>{
+        color.classList.remove('activeColor')
+    })
+}
+
 colorPalette.forEach(color=>{
+    
     color.addEventListener('click',()=>{
         let primaryHue;
-
+        removeClassActiveColor()
+        color.classList.add('activeColor')
         if(color.classList.contains('color-1')){
             primaryHue = '#6b4ce6';//#6b4ce6
         }else if(color.classList.contains('color-2')){
@@ -149,24 +158,37 @@ colorPalette.forEach(color=>{
     })
 })
 
+
+const removeClassActive=()=>{
+    colorBackground.forEach(color=>{
+        color.classList.remove('active')
+    })
+}
+
 colorBackground.forEach(color=>{
     color.addEventListener('click',()=>{
+        removeClassActive()
+        color.classList.toggle('active');
         let corBackground;
         let corElementos;
         let fontcolors;
         if(color.classList.contains('bg-1')){
+            
             corBackground = '#f0eef6'
             corElementos= '#ffffff'
             fontcolors='#000000'
         }else  if(color.classList.contains('bg-2')){
+            
             corBackground ='#2d2546' 
             corElementos= '#241e38'
             fontcolors='#ffffff'
         }else  if(color.classList.contains('bg-3')){
-            corBackground ='#1f1e1e' 
+            
+            corBackground ='#0f0f0f' 
             corElementos= '#000000'
             fontcolors='#ffffff'
         }
+        
         root.style.setProperty('--background-body',corBackground)
         root.style.setProperty('--fontColor',fontcolors)
         root.style.setProperty('--background-elements',corElementos)

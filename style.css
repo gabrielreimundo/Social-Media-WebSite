@@ -23,6 +23,8 @@
     --sticky-top-left: 5.4rem;
     --sticky-top-right: -18rem;
 
+
+
     --fontColor:#000000;
     /* #ffffff */
 }
@@ -494,6 +496,8 @@ main .container .right{
     place-items: center;
     font-size: 0.9rem;
     display: none;
+    transition: 300ms all ease;
+    color: var(--fontColor);
 }
 .customize-theme .card{
     background: var(--color-white);
@@ -513,6 +517,7 @@ main .container .right{
     background: var(--color-light);
     padding: var(--search-padding);
     border-radius: var(--card-border-radius);
+    transition: 300ms all ease;
 }
 .customize-theme .choose-size{
     background: var(--color-secondary);
@@ -544,7 +549,13 @@ main .container .right{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: 300ms all ease;
 }
+
+.activeColor{
+    border: 2px solid var(--fontColor);
+}
+
 .customize-theme .choose-color span{
     width: 2.2rem;
     height: 2.2rem;
@@ -585,6 +596,7 @@ main .container .right{
     font-weight: bold;
     border-radius: 0.4rem;
     cursor: pointer;
+    transition: 300ms all ease;
 }
 .customize-theme .choose-bg > div.active{
     border: 2px solid var(--color-primary);
@@ -598,7 +610,7 @@ main .container .right{
     color: white;
 }
 .customize-theme .choose-bg .bg-3{
-    background: #151221;
+    background: #000000;
     color: white;
 }
 .customize-theme .choose-bg >div span{
