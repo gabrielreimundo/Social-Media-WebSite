@@ -24,7 +24,8 @@
     --sticky-top-left: 5.4rem;
     --sticky-top-right: -18rem;
 
-    --fontColorWhite:#ffffff;
+    --fontColor:#000000;
+    /* #ffffff */
 }
 
 
@@ -45,11 +46,15 @@ body{
     overflow-x: hidden;
 }
 
+
 /*-------------GENERAL STYLES------------*/
 
 .container{
     width: 80%;
     margin: 0 auto;
+}
+.log{
+    color: var(--fontColor);
 }
 .profile-photo{
     width: 2.7rem;
@@ -82,6 +87,10 @@ img{
 }
 .text-muted{
     color: var(--color-gray);
+}
+
+.handle h4 {
+    color: var(--fontColor);
 }
 
 /*---------------NAVBAR---------------*/
@@ -185,6 +194,7 @@ main .container .left .profile{
 .left .sidebar h3{
     margin-left: 1.5rem;
     font-size: 1rem;
+    color: var(--fontColor);
 }
 .left .sidebar .active{
     background: var(--color-light);
@@ -228,6 +238,7 @@ main .container .left .profile{
     box-shadow: 0 0 2rem hsl(var(--color-primary),75% 60% 25%);
     z-index: 8;
     display: none;
+    color: var(--fontColor);
 }
 .left .notifications-popup::before{
     content: "";
@@ -339,6 +350,7 @@ main .container .left .profile{
     margin: 1rem 0;
     font-size: 0.85rem;
     line-height: 1.5;
+    color: var(--fontColor);
 }
 .middle .feeds .head{
     display: flex;
@@ -386,6 +398,7 @@ main .container .right{
     background: var(--color-white);
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
+    color: var(--fontColor);
 }
 .right .messages .heading {
     display: flex;
@@ -447,6 +460,7 @@ main .container .right{
 /* ------------------FRIEND REQUESTS--------------- */
 .right .friend-requests{
     margin-top: 1rem;
+    color: var(--fontColor);
 }
 .right .friend-requests h4{
     color: var(--color-gray);
